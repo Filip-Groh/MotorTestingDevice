@@ -12,7 +12,7 @@ basic.forever(() => {
     console.logValue("Pin1 - Raw", pins.map(pins.analogReadPin(AnalogPin.P1), 0, 1023, 0, 1))
     console.logValue("Pin1 - Pure", state ? 1 : 0)
     console.logValue("Pin1 - Count", holeCount)
-    console.logValue("Pin1 - Rotation", holeCount / numberOfHolesForRotation)
+    console.logValue("Pin1 - Rotation", holeCount / (numberOfHolesForRotation * 2))
 
     basic.pause(1)
 })
