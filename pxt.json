@@ -9,7 +9,8 @@
     },
     "files": [
         "main.ts",
-        "README.md"
+        "README.md",
+        "queue.ts"
     ],
     "testFiles": [
         "test.ts"
