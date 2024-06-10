@@ -22,4 +22,8 @@ class Queue {
         }
         return sum / this.data.length
     }
+
+    getLength(): number {
+        return this.data.length
+    }
 }
