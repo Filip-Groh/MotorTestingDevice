@@ -62,3 +62,11 @@ loops.everyInterval(motorStepInMs, () => {
     speed++
     speed = Math.clamp(0, 255, speed)
 })
+
+/*
+TODO:
+1) linearita - vypočítat ideální lineární křivky a spočítání vzdálenosti od ideální křivky
+2) zobrazení na display - graf a finální data
+
+Odevzdání - > 17.6.
+*/
