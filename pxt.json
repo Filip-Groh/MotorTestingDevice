@@ -10,7 +10,8 @@
     "files": [
         "main.ts",
         "README.md",
-        "queue.ts"
+        "queue.ts",
+        "list.ts"
     ],
     "testFiles": [
         "test.ts"

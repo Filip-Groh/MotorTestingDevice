@@ -14,6 +14,7 @@ let startSpeed: number = 0
 
 let rpsQueue: Queue = new Queue(lengthOfRPSQueue, [])
 let maxRpsQueue: Queue = new Queue(lengthOfMaxRPSQueue, [])
+let linearityList: List = new List([])
 
 let speed: number = 0
 
@@ -35,16 +36,22 @@ loops.everyInterval(rpsInMs, function () {
     if (speed === 255) {
         maxRpsQueue.push(rpsQueue.getAverage())
     }
+    if (maxRpsQueue.getLength() <= 1 && holeCount >= holeErrorCorrection) {
+        linearityList.push(rpsQueue.getAverage())
+    }
 })
 
 loops.everyInterval(loggingRateInMs, () => {
     console.logValue("Count", holeCount)
     console.logValue("Rotation", rotation)
-    console.logValue("RPS", rpsQueue.getAverage())
-    console.logValue("Max RPS", maxRpsQueue.getAverage())
-    console.logValue("Measurement %", maxRpsQueue.getLength() / lengthOfMaxRPSQueue * 100)
     console.logValue("Speed", speed)
     console.logValue("Starting Speed", startSpeed)
+    console.logValue("RPS", rpsQueue.getAverage())
+    console.logValue("Max RPS", maxRpsQueue.getAverage())
+    console.logValue("Linearity", linearityList.getFirstPointLastPointLinearity())
+    console.logValue("Unstability", maxRpsQueue.getLinearity(0, maxRpsQueue.getAverage()))
+    console.logValue("Acceleration Measurement %", speed / 255 * 100)
+    console.logValue("Max Speed Measurement %", maxRpsQueue.getLength() / lengthOfMaxRPSQueue * 100)
 })
 
 input.onLogoEvent(TouchButtonEvent.Pressed, function() {
@@ -55,6 +62,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function() {
     startSpeed = 0
     rpsQueue = new Queue(lengthOfRPSQueue, [])
     maxRpsQueue = new Queue(lengthOfMaxRPSQueue, [])
+    linearityList = new List([])
 })
 
 loops.everyInterval(motorStepInMs, () => {
@@ -65,7 +73,6 @@ loops.everyInterval(motorStepInMs, () => {
 
 /*
 TODO:
-1) linearita - vypočítat ideální lineární křivky a spočítání vzdálenosti od ideální křivky
 2) zobrazení na display - graf a finální data
 
 Odevzdání - > 17.6.
