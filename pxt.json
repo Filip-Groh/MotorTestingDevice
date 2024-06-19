@@ -3,10 +3,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*",
-        "microphone": "*",
         "pxt-magicbit-pca9685": "github:TomasKazda/pxt-magicbit-pca9685#1e097c914b2c7ed1f4071d7b6288ef64812030e2",
-        "SH1106_OLED": "github:filip-groh/pxt-oled-sh1106#c39515c3a64e7e978c2668e9de85b9e2fdedcc5d"
+        "SH1106_OLED": "github:filip-groh/pxt-oled-sh1106#413491b2c412b214bd128de304c4a8d4714598d2"
     },
     "files": [
         "main.ts",
@@ -14,9 +12,7 @@
         "queue.ts",
         "list.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
+    "testFiles": [],
     "targetVersions": {
         "target": "6.0.28",
         "targetId": "microbit"

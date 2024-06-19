@@ -22,7 +22,7 @@ class List {
     }
 
     getAverage(): number {
-        return this.getSum() / this.data.length
+        return (this.getSum() / this.data.length) || 0
     }
 
     getLinearity(a: number, b: number): number {
@@ -37,5 +37,9 @@ class List {
         let a: number = (this.data[0] - this.data[this.data.length - 1]) / this.data.length
         let b: number = this.data[0]
         return this.getLinearity(a, b)
+    }
+
+    getData(): Array<number> {
+        return this.data
     }
 }
