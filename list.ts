@@ -5,7 +5,7 @@ class List {
         this.data = inicialData
     }
 
-    push(item: number) {
+    push(item: number): void {
         this.data.push(item)
     }
 
