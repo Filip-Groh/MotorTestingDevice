@@ -181,7 +181,11 @@ function renderData(): void {
 function renderProgres(): void {
     writeTextInCenter(3, "Tests: ")
     writeTextInCenter(4, `${tests.length + 1}/${choosenNumberOfTests}`)
-    writeTextInCenter(6, `${Math.roundWithPrecision((control.millis() - timeFromTestStart) / 1000, 2)} s`)
+    if (isStepping) {
+        writeTextInCenter(6, `${Math.roundWithPrecision((control.millis() - timeFromTestStart) / 1000, 2)} s`)
+    } else {
+        writeTextInCenter(6, `${Math.roundWithPrecision((tests[tests.length - 1].time - timeFromTestStart) / 1000, 2)} s`)
+    }
 }
 
 function renderResult(): void {

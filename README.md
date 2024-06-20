@@ -1,50 +1,37 @@
+# Motor Tester
 
-> Open this page at [https://filip-groh.github.io/motortester/](https://filip-groh.github.io/motortester/)
+## How to use
+* By pressing A and B buttons select number of tests
+* Press Logo button to start
+* By pressing A and B buttons choice screen
+* Press Logo button to abort the test
+* When finised press A and B buttons to look at each test or their average
+* Press Logo button to exit test result and return to menu
 
-## Use as Extension
+## Screens
+### Menu screen
+* Choice number of tests to be performed
+* Press Logo to start
 
-This repository can be added as an **extension** in MakeCode.
+### Data screen
+* Speed indicates current value in motor function
+* Starting speed indicates minimal speed to start spinning motor
+* RPS indicates current rotations per second
+* Average Max RPS indicates maximal rotations per second of a motor
+* Unlinearity indicates diffrence between real acceleration and prefect linear acceleration
+* Unstability indicates stability of maximal rotations per second
+* Acceleration shows current state of acceleration part of test in %
+* Max Speed shows current state of max speed part of test in %
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/filip-groh/motortester** and import
+### Graph screen
+* The line indicates RPS (rotations per second) in time
+* Minimal displayable RPS (rotations per second) is 0
+* Maximal displayable RPS (rotations per second) is 10
 
-## Edit this project
+### Progress screen
+* Displays current test and remaining tests
+* Displays time of a test
 
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/filip-groh/motortester** and click import
-
-#### Metadata (used for search, rendering)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
-
-
-
-> Open this page at [https://filip-groh.github.io/motortestingdevice/](https://filip-groh.github.io/motortestingdevice/)
-
-## Use as Extension
-
-This repository can be added as an **extension** in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/filip-groh/motortestingdevice** and import
-
-## Edit this project
-
-To edit this repository in MakeCode.
-
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/filip-groh/motortestingdevice** and click import
-
-#### Metadata (used for search, rendering)
-
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+### Result screen
+* Displays averaged values of tests
+* Also shows all test separately
