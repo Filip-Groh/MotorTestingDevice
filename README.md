@@ -35,3 +35,6 @@
 ### Result screen
 * Displays averaged values of tests
 * Also shows all test separately
+
+## Video
+[YouTube](https://youtu.be/t6vkzQ0KRm0)
